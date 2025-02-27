@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.editor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+/* Form Section */
+/* Centering the Form Section */
+.form-section {
+    width: 40%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content */
+    text-align: center;
+}
+
+/* Add a smooth hover effect */
+.form-section:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Input & Textarea Fields */
+input, textarea {
+    display: block;
+    width: 90%; /* Slight padding from edges */
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center; /* Center text inside */
+}
+
+/* Focus effect on input fields */
+input:focus, textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Textarea Specific Styles */
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+/* Download Button */
+#downloadBtn {
+    width: 90%; /* Matches input width */
+    padding: 14px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Button Hover Effect */
+#downloadBtn:hover {
+    background: linear-gradient(135deg, #0056b3, #003f80);
+    transform: translateY(-2px);
+}
+
+/* Button Click Effect */
+#downloadBtn:active {
+    transform: translateY(0);
+}
+
+
+/* Invitation Section */
+#invitation-container {
+    width: 50%;
+    max-width: 500px;
+    text-align: center;
+}
+
+#invitation-card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#template {
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+}
+
+/* Custom Section */
+#custom-section {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    width: 100%;
+    min-height: 170px; /* Adjust height dynamically */
+    max-height: auto;
+    max-width: 100%; /* Match template width */
+    background: white;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    text-align: center;
+    gap: 15px; /* Spacing between image and text */
+}
+
+/* User Image */
+#userImage {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid black;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Text Section */
+.text-section {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    align-items: center; /* Center text horizontally */
+    justify-content: center; /* Center text vertically */
+    text-align: center;
+}
+
+/* User Name */
+#userName {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Custom Paragraph */
+#customParagraph {
+    font-size: 16px;
+    margin: 5px 0;
+    max-width: 90%;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+/* 📱 Mobile Responsive Styles */
+@media (max-width: 768px) {
+    #custom-section {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Reduce spacing */
+        height: auto; /* Adjust height dynamically */
+    }
+
+    #userImage {
+        width: 80px;
+        height: 80px;
+    }
+
+    #userName {
+        font-size: 20px;
+    }
+
+    #customParagraph {
+        font-size: 14px;
+        max-width: 100%; /* Ensure full width */
+    }
+}
+
+@media (max-width: 480px) {
+    #custom-section {
+        gap: 8px; /* Reduce spacing further */
+    }
+
+    #userImage {
+        width: 70px;
+        height: 70px;
+    }
+
+    #userName {
+        font-size: 18px;
+    }
+
+    #customParagraph {
+        font-size: 14px;
+    }
+}
+
+
+/* Make draggable elements work on touch devices */
+.draggable {
+    position: relative;
+    cursor: grab;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .editor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-section, #invitation-container {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    #custom-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #userImage {
+        width: 80px;
+        height: 80px;
+    }
+
+    #userName {
+        font-size: 20px;
+    }
+
+    #customParagraph {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-section, #invitation-container {
+        width: 95%;
+    }
+
+    #userImage {
+        width: 70px;
+        height: 70px;
+    }
+
+    #userName {
+        font-size: 18px;
+    }
+
+    #customParagraph {
+        font-size: 14px;
+    }
+
+    #downloadBtn {
+        font-size: 14px;
+    }
+}

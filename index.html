@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation Editor</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Customize Your Invitation</h1>
+        <div class="editor">
+            <div class="form-section">
+                <input type="text" id="nameInput" placeholder="Enter Your Name">
+                <h3>Choose Photo</h3>
+                <input type="file" id="imageInput" accept="image/*">
+                <textarea id="paragraphInput" placeholder="Enter Additional Text"></textarea>
+                <button id="downloadBtn">Download Invitation</button>
+            </div>
+
+            <div id="invitation-container">
+                <div id="invitation-card">
+                    <img src="/public/images/task.jpg" id="template" alt="Invitation Template">
+                </div>
+                <div id="custom-section">
+                    <img id="userImage" />
+                    <div class="text-section">
+                        <p id="userName" class="draggable">Your Name</p>
+                        <p id="customParagraph" class="draggable">Your custom message...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>
