@@ -74,20 +74,4 @@ document.getElementById("downloadBtn").addEventListener("click", function () {
             document.body.removeChild(link);
         }, "image/png");
     }).catch(error => console.error("Error generating image:", error));
-
-    const username = document.getElementById("userName").innerText;
-    const additionalText = document.getElementById("customParagraph").innerText;
-
-    fetch("/save", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ username, additionalText })
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log("Data saved:", data);
-    })
-    .catch(error => console.error("Error saving data:", error));
 });
